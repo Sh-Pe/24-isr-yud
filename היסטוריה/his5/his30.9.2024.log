@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2024.6.30)  30 SEP 2024 14:07
+This is LuaHBTeX, Version 1.18.1 (MiKTeX 24.4) (format=lualatex 2024.6.30)  26 OCT 2024 22:05
  restricted system commands enabled.
 **his30.9.2024.tex
 (./his30.9.2024.tex
@@ -1446,30 +1446,109 @@ Package fontspec Info:
 (fontspec)             CLM/BI:mode=node;script=hebr;language=IWR;+tlig;family=s
 f;"
 
+luaotfload | aux : font no 33 (nil) defines no feature for script latn with lang
+uage eng
+
+Package fontspec Info: 
+(fontspec)             Language 'English' not explicitly supported within font
+(fontspec)             'Monaspace Xenon' with script 'Latin'. Check the
+(fontspec)             typeset output, and if it is okay then ignore this
+(fontspec)             warning. Otherwise a different font should be chosen.
+
+luaotfload | aux : font no 33 (nil) defines no feature for script latn with lang
+uage eng
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script dflt
+ with language eng
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 38 (nil) does not define feature smcp for script dflt
+ with language dflt
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script dflt
+ with language eng
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 39 (nil) does not define feature smcp for script dflt
+ with language dflt
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script dflt
+ with language eng
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 40 (nil) does not define feature smcp for script dflt
+ with language dflt
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script latn
+ with language eng
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script dflt
+ with language eng
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 41 (nil) does not define feature smcp for script dflt
+ with language dflt
+
+Package fontspec Info: 
+(fontspec)             Font family 'MonaspaceXenon(0)' created for font
+(fontspec)             'Monaspace Xenon' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Script=Latin,Language=English,RawFeature={family=tt}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Monaspace
+(fontspec)             Xenon:mode=node;script=latn;language=ENG;family=tt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"name:Monaspace
+(fontspec)             Xenon/B:mode=node;script=latn;language=ENG;family=tt;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:Monaspace
+(fontspec)             Xenon/I:mode=node;script=latn;language=ENG;family=tt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"name:Monaspace
+(fontspec)             Xenon/BI:mode=node;script=latn;language=ENG;family=tt;"
+
 )
 \openout1 = his30.9.2024.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 313.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 315.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-13.
+15.
  (/home/shpe/.miktex/texmfs/install/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 313.
-LaTeX Font Info:    ... okay on input line 313.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 315.
+LaTeX Font Info:    ... okay on input line 315.
 
 (/home/shpe/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1545,19 +1624,19 @@ Inserting `Babel.math_box_dir' in `hpack_filter'.
 Inserting `Babel.pre_otfload_h' in `hpack_filter'.
 Inserting `luaotfload.node_processor' in `hpack_filter'.
 Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 314
+LaTeX Font Info:    Trying to load font information for U+msa on input line 316
 .
 (/home/shpe/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 314
+LaTeX Font Info:    Trying to load font information for U+msb on input line 316
 .
 
 (/home/shpe/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
-4.
+6.
 
 (/home/shpe/.miktex/texmfs/install/tex/latex/jknappen/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1565,18 +1644,18 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 LaTeX Font Info:    Font shape `TU/DavidCLM(0)/bx/n' in size <14.4> not availab
 le
 (Font)              Font shape `TU/DavidCLM(0)/b/n' tried instead on input line
- 315.
+ 317.
 LaTeX Font Info:    Font shape `TU/DavidCLM(0)/bx/n' in size <12> not available
 
 (Font)              Font shape `TU/DavidCLM(0)/b/n' tried instead on input line
- 316.
+ 318.
 LaTeX Font Info:    Font shape `TU/DavidCLM(0)/bx/n' in size <10> not available
 
 (Font)              Font shape `TU/DavidCLM(0)/b/n' tried instead on input line
- 317.
+ 319.
 
-Overfull \hbox (71.00847pt too wide) in paragraph at lines 335--336
-[][] 
+Overfull \hbox (71.00847pt too wide) in paragraph at lines 338--340
+[][]
  []
 
 
@@ -1593,20 +1672,20 @@ L3 programming layer <2024-05-27>
 )
 
 Here is how much of LuaTeX's memory you used:
- 37481 strings out of 475931
+ 37445 strings out of 475931
  125375,1977958 words of node,token memory allocated
- 762 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 15 attribute, 103 glue_spe
-c, 7 attribute_list, 2 write nodes
-   avail lists: 1:3,2:2630,3:611,4:80,5:115,6:57,7:5031,8:3,9:500,10:5,11:4
- 59232 multiletter control sequences out of 65536+600000
- 99 fonts using 5631791 bytes
- 116i,8n,114p,1669b,1929s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 780 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 dir, 2 glue, 4 kern, 1 glyph, 18 attribute, 103 g
+lue_spec, 8 attribute_list, 2 write nodes
+   avail lists: 1:2,2:2883,3:659,4:78,5:218,6:55,7:5022,8:3,9:496,10:5,11:4
+ 59196 multiletter control sequences out of 65536+600000
+ 110 fonts using 7103463 bytes
+ 116i,8n,114p,1669b,2014s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/OTF/DavidCLM-MediumItalic.otf></usr/share/fonts/OTF/DavidCLM-B
 old.otf></usr/share/fonts/OTF/DavidCLM-Medium.otf></home/shpe/.miktex/texmfs/ins
 tall/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/shpe/.miktex/texmfs/install
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on his30.9.2024.pdf (2 pages, 43394 bytes).
+Output written on his30.9.2024.pdf (2 pages, 43444 bytes).
 
 PDF statistics: 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
