@@ -104,12 +104,12 @@ d2values = list(data2.values())
 # plt.figure(figsize=(8, 6))  # Set figure size
 plt.figure(figsize=(8, 8))  # Set figure size
 plt.subplot(211)
-plt.plot(data.keys(), data.values(), linestyle='-', color='tab:blue', label='רווחים'[::-1])
+plt.plot(data.keys(), data.values(), linestyle='-', color='tab:blue', label='הכנסות'[::-1])
 plt.plot(list(data2.keys()), d2values, marker='o', linestyle='--', color='tab:green', label="קירוב טיילור"[::-1])
 plt.legend()
 
-plt.title("רווח על פני זמן"[::-1], fontsize=16)
-plt.ylabel("רווחים )מיליארדי דולרים("[::-1], fontsize=12)
+plt.title("הכנסות על פני זמן"[::-1], fontsize=16)
+plt.ylabel("הכנסות )מיליארדי דולרים("[::-1], fontsize=12)
 
 plt.grid(alpha=0.5)
 
