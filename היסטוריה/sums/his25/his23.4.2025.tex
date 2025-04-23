@@ -1,12 +1,12 @@
 %! ~~~ Packages Setup ~~~ 
-\documentclass[]{beamer}
-\usetheme{Boadilla}
-\usepackage{ragged2e}
-\apptocmd{\frame}{}{\justifying}{}
-\setbeamertemplate{navigation symbols}{}
+\documentclass[]{article}
+\usepackage{lipsum}
+\usepackage{rotating}
 
 
 % Math packages
+\usepackage[usenames]{color}
+\usepackage{forest}
 \usepackage{ifxetex,ifluatex,amssymb,amsmath,mathrsfs,amsthm,witharrows,mathtools,mathdots}
 \usepackage{amsmath}
 \WithArrowsOptions{displaystyle}
@@ -23,6 +23,7 @@
 
 
 % code 
+\usepackage{algorithm2e}
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -73,10 +74,58 @@
 
 % Deisgn
 \usepackage[labelfont=bf]{caption}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{multicol}
 \usepackage[skip=4pt, indent=0pt]{parskip}
+\usepackage[normalem]{ulem}
+\forestset{default}
+\renewcommand\labelitemi{$\bullet$}
+\usepackage{titlesec}
+\titleformat{\section}[block]
+{\fontsize{15}{15}}
+{\sen \dotfill (\thesection)\dotfill\she}
+{0em}
+{\MakeUppercase}
 \usepackage{graphicx}
 \graphicspath{ {./} }
+
+\usepackage[colorlinks]{hyperref}
+\definecolor{mgreen}{RGB}{25, 160, 50}
+\definecolor{mblue}{RGB}{30, 60, 200}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=mgreen,
+	linkcolor=black,
+	urlcolor=mblue,
+	pdftitle={AI Something},
+	pdfpagemode=FullScreen,
+}
+
+
+% Hebrew initialzing
+\usepackage[bidi=basic]{babel}
+\PassOptionsToPackage{no-math}{fontspec}
+\babelprovide[main, import, Alph=letters]{hebrew}
+\babelprovide[import]{english}
+\babelfont[hebrew]{rm}{David CLM}
+\babelfont[hebrew]{sf}{David CLM}
+%\babelfont[english]{tt}{Monaspace Xenon}
+\usepackage[shortlabels]{enumitem}
+\newlist{hebenum}{enumerate}{1}
+
+% Language Shortcuts
+\newcommand\en[1] {\begin{otherlanguage}{english}#1\end{otherlanguage}}
+\newcommand\he[1] {\she#1\sen}
+\newcommand\sen   {\begin{otherlanguage}{english}}
+	\newcommand\she   {\end{otherlanguage}}
+\newcommand\del   {$ \!\! $}
+
+\newcommand\npage {\she\vfil {\hfil \textbf{\textit{המשך בעמוד הבא}}} \hfil \vfil \pagebreak\sen}
+\newcommand\ndoc  {\dotfill \\ \vfil {\begin{center}
+			{\textbf{\textit{שחר פרץ, 2025}} \\
+				\scriptsize \textit{קומפל ב־}\en{\LaTeX}\,\textit{ ונוצר באמצעות תוכנה חופשית בלבד}}
+	\end{center}} \vfil	}
 
 \newcommand{\rn}[1]{
 	\textup{\uppercase\expandafter{\romannumeral#1}}
@@ -181,6 +230,8 @@
 \newcommand\lc    {\left\lceil}
 \newcommand\rf    {\right\rfloor}
 \newcommand\lf    {\left\lfloor}
+\newcommand\ceil  [1] {\lc #1 \rc}
+\newcommand\floor [1] {\lf #1 \rf}
 
 \newcommand\lex   {<_{lex}}
 
@@ -201,7 +252,6 @@
 \newcommand\logx  {\log x}
 \newcommand\lnx   {\ln x}
 \newcommand\cosx  {\cos x}
-\newcommand\cost  {\cos \theta}
 \newcommand\sinx  {\sin x}
 \newcommand\sint  {\sin \theta}
 \newcommand\tanx  {\tan x}
@@ -387,6 +437,12 @@
 
 \renewcommand\phi     {\varphi}
 
+\newtheorem{Theorem}{משפט}
+\theoremstyle{definition}
+\newtheorem{definition}{הגדרה}
+\newtheorem{Lemma}{למה}
+\newtheorem{Remark}{הערה}
+\newtheorem{Notion}{סימון}
 
 \newcommand\theo  [1] {\begin{Theorem}#1\end{Theorem}}
 \newcommand\defi  [1] {\begin{definition}#1\end{definition}}
@@ -394,46 +450,109 @@
 \newcommand\lem   [1] {\begin{Lemma}#1\end{Lemma}}
 \newcommand\noti  [1] {\begin{Notion}#1\end{Notion}}
 
+% DS
+\newcommand\limsi     {\limsup_{n \to \inf}}
+\newcommand\limfi     {\liminf_{n \to \inf}}
+
+\DeclareMathOperator\amort   {amort}
+\DeclareMathOperator\worst   {worst}
+\DeclareMathOperator\type    {type}
+\DeclareMathOperator\cost    {cost}
+
+\newcommand\dsList{
+	\sFunc{List}
+	\sFunc{Retrieve}
+	\SetKwFunction{RetrieveFirst}{Retrieve-First}
+	\SetKwFunction{RetrieveLast}{Retrieve-Last}
+	\sFunc{Delete}
+	\SetKwFunction{DeleteFirst}{Delete-First}
+	\SetKwFunction{DeleteLast}{Delete-Last}
+	\sFunc{Insert}
+	\SetKwFunction{InsertFirst}{Insert-First}
+	\SetKwFunction{InsertLast}{Insert-Last}
+	\sFunc{Shift}
+	\sFunc{Length}
+	\sFunc{Concat}
+	\sFunc{Plant}
+	\sFunc{Split}
+}
+\newcommand\dsQueue{
+	\sFunc{Queue}
+	\sFunc{Enqueue}
+	\sFunc{Head}
+	\sFunc{Dequeue}
+}
+\newcommand\dsStack{
+	\sFunc{Stack}
+	\sFunc{Push}
+	\sFunc{Top}
+	\sFunc{Pop}
+}
+\newcommand\dsVector{
+	\sFunc{Vector}
+	\sFunc{Get}
+	\sFunc{Set}
+}
+\newcommand\dsGraph{
+	\sFunc{Graph}
+	\sFunc{Edge}
+	\SetKwFunction{AddEdge}{Add-Edge}
+	\SetKwFunction{RemoveEdge}{Remove-Edge}
+	\sFunc{InDeg} \sFunc{OutDeg}
+}
+\newcommand\importDs{
+	\dsList
+	\dsQueue
+	\dsStack
+	\dsVector
+	\dsGraph
+	\SetKwData{error}{\color{codered}error}
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	\SetKwRepeat{Do}{do}{while}
+	\SetKwData{Null}{\color{codeblue}null}
+}
+
+
+% Algorithems
+\newcommand\sFunc [1] {\SetKwFunction{#1}{#1}}
+\newcommand\sData [1] {\SetKwData{#1}{#1}}
+\newcommand\sIO   [1] {\SetKwInOut{#1}{#1}}
+\newcommand\ttt   [1] {\sen \texttt{#1} \she\,}
+\newcommand\io    [2] {\Input{#1}\Output{#2}\BlankLine}
+
 %! ~~~ Document ~~~
 
-\author{Shahar Perets}
-\title{In Regard Of Banning Books in 2023-5 in the USA}
+\author{שחר פרץ}
+\title{\textit{היסטוריה 25}}
 \begin{document}
 	\maketitle
+	(ערב יום השואה)
 	
-	\begin{frame}
-		\frametitle{Examples}
-		These 3 one of the 4 most commonly banned book in the US according to PEN America: 
-		\begin{itemize}
-			\item \emph{Nineteen Minutes} -- a book about school shooting. Mostly banned becuase of "description or depiction of nudity, sexual conduct, sexual excitement, sadomasochistic abuse, or excretion"
-			\item \emph{The Perks of Being a Wallflower} -- a book about adolescence, sexual attraction and more. Commonly banned because its "pornographic" content and "vulgarity". 
-			\item \emph{Sold} -- a book envolves geneder fluidity. 
-		\end{itemize}
-		Almost all of the books that have been banned in US libraries envolves a content which is against the republican party stand on them. 
-		%		To sum up -- most of the books are banned because of political content, while other reasons are 
-	\end{frame}
+	נבדיל בין שתי מילים: ,
+	\begin{itemize}
+		\item \textbf{השואה} – שואת היהודים באירופה ובעולם, בין השנים 1933 (יש כאלו שסופרים מ־41, תלוי הגדרה) עד 1945. 
+		\item \textbf{שואה} – אסון גדול. מילה שמופיעה עוד בתנ"ך, וטרם השואה שימשה עוד לדברים אחרים. 
+	\end{itemize}
 	
-	\begin{frame}
-		\frametitle{The state of book banning in the USA today}
-		\begin{center}
-			\begin{itemize}
-				\item According to The American Library Association, the number of targted titles in \textbf{public libraries} to be banned, increased by 92\% precents in 2024, accounting for 46\% of all book challenges. 
-				\item The rest are school mostly libraries. 
-				\item Books are usually banned in either of two ways: 
-				\begin{itemize}
-					\item By presuring public entities to remove the book from the library. 
-					\item By laws and orders of the state itself. 
-				\end{itemize}
-			\end{itemize}
-		\end{center}
-	\end{frame}
+	ההבדל – השואה היא אירוע ספציפי שתחום במקום וזמן. שואה – אסון. 
 	
-	\begin{frame}
-		\frametitle{Problems}
-		\begin{itemize}
-			\item Banning books in high schools restricts adolescents information about what happens in the world. Not talking about geneder, school shooting and etc. won't make them go away. 
-			\item Banning books from public libraries that talks about a certin political side, is a way of one side to force its ideology on the other side. 
-		\end{itemize}
-	\end{frame}
+	עתה נצפה בסרטון "מרגע זה אתה לבד": סיפורו של ניצול השואה מאיר ברנד. 
 	
+	קרקוב, העיר המקורית של מאיר, היוותה עיר הבירה של השליש הזה של פולין (פולין חולקה ל־3 חלקים) ועל כן לא חרבה (בניגוד לוורשה, בה אין בניינים סובייטים סטייל חארצ'ושנוב). יחס ליהודים יחס אלים, היה רצח ברחובות עוד לפני הגטאות (אך לא שיטתי). בלג'ט היה מחנה השמדה במזרח פולין, ושלחו הרבה יהודים ממערב פולין לשם. אלו מחנות השמדה מלאים (בניגוד לשאוויץ' ומיידנק) שאליהם מגיעים ונרצחים באותו היום. 
+	
+	שואת יהודי הונגריה לא מדוברת ישיורת לרוב, אך היא האירוע הכי טרגי בשואה. הסיבה: היא הייתה יכולה להמנע. הם נרצחו ביולי־אוגוסט 1944, בשלב שבו חצי אירופה הייתה משוחררת. תוך חודש וחצי הושמדו מרבית יהודי הונגריה. הדיבורים על כך שאם היו מפציצים את פסי הרכבת הם היו ניצלים, מדברים על כך. 
+	
+	הסיפור של רכבת קסטנר – יש שמאשימים אותו בבגידה ושיתוף פעולה עם הנאצים (סיפור מורכב בו הוא טבע דיבה נגד מישהו אך המשפט התהפך כנגדו), והוא נושא רגיש. אייכמן פיזית היה בהונגריה (כדי לנהל את ההשמדה) והרכבת נוצרה המטרה להציל את היהודים. פרשת קסטנר מסובכת ויש קורס שלם באונ' עליה (הרעיון היה שקטסנר עשה את עצמו נאצי, במטרה לקחת רכבת ולהציל יהודים). זה לכאורה היה סיכום עם הנאצים ולא מתחת לאף שלהם, וחיילים גרמנים היו ברכבת כחלק מההסכם. הרכבת הגיעה לברגן בלזן (שם נרצחה אנה פרנק), שהוא בניגוד ליעוד של רוב יהודי הונגריה – אינו מחנה השמדה. 
+	
+	ישנם כמה דברים מרכזיים שנרצה להתייחס אליםה מהעדות: 
+	,\begin{itemize}
+		\item \textit{לזכר משפחת ברנד – לזכרון לדורות הבאים}. עבור מרבית העדים, זהו הציווי. זכור: ציווי מאוד משמעותי ביהדות בהקשרים רבים. ספציפית מאיר נשלח ע"י הוריו בשביל מטרה זו. אצל חלק מהעדים, לא לשכוח את היותך יהודי היה חלק חשוב מהעדות. לפי שרית, זה גם תפקידנו, ואם העדויות לא יועברו האירוע יהפוך להיות חורבן בית שני לדיד הדורות הבאים. עוד כמה דורות לא תהיה נוכחות פיזית של האנשים האלו. 
+		\item \textit{יהודים שהצילו יהודים}. גויים שהצילו יהודים קרויים חסידי אומות עולם (בהמשך נלמד את הקריטריונים הספציפיים). בעיקר נוצרים, אך יש גם מעט מוסלמים. יהודים שהצילו יהודים לרוב לא זוכרים להכרה, מיד ושם או מהמדינה. רק בשנים האחרונות לאט לאט מתחילים לדבר עלזה. יש לא מעט כאלו, היו הרבה במחתרות בצרפת, במחתרת העולמית וכו'. 
+	\end{itemize}
+	
+	ישנם חסידי אומות עולם שעלו לארץ, חלקם התגיירו וחלק נשארו בדתם. בהתחלה לא היה לכך זכר במרחב הציבורי. ראה פרויקט "לא נצר אחרון אני תיכף אזכר ואגיד לכם". תפקידו: לספר את סיפורם, ולערוך טקס בקברם. יש כמה עשרות כאלו בארץ. שרית הכירה את הפרויקט דרך תלמיד שסיים לימודים ב־2014 ונסע ב־2013 לפולין, וציין שסבתא שלו חסידת אומות עולם, על אף שסבתו יהודיה. לקח לשרית הרבה זמן לבדוק מה קורה איתה (כי היא שינתה של שמה וכו') שהצילה שלוש משפחות, שהתחתנה עם אדם יהודי והתגיירה. כששאלה הלמה לא דיבר על כך כל השנים, ענה שבבית הספר היסודי כאשר ביקשו להביא סיפורים משפחתיים המורה השיבה שזה לא סיפור מעניין ומשם הוא הניח שזה לא סיפור מעניין. אביה גם היה חסיד אומות עולם. שם העמותה (עכשיו בדקתי בגוגל ושרית אישה) – חסד אחרון. 
+	
+	
+	\ndoc
 \end{document}
