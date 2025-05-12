@@ -7,7 +7,8 @@
 % Math packages
 \usepackage[usenames]{color}
 \usepackage{forest}
-\usepackage{ifxetex,ifluatex,amsmath,amssymb,mathrsfs,amsthm,witharrows,mathtools,mathdots}
+\usepackage{ifxetex,ifluatex,amssymb,amsmath,mathrsfs,amsthm,witharrows,mathtools,mathdots}
+\usepackage{amsmath}
 \WithArrowsOptions{displaystyle}
 \renewcommand{\qedsymbol}{$\blacksquare$} % end proofs with \blacksquare. Overwrites the defualts. 
 \usepackage{cancel,bm}
@@ -22,6 +23,7 @@
 
 
 % code 
+\usepackage{algorithm2e}
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -78,14 +80,21 @@
 \usepackage[normalem]{ulem}
 \forestset{default}
 \renewcommand\labelitemi{$\bullet$}
-\usepackage{titlesec}
-\titleformat{\section}[block]
-{\fontsize{15}{15}}
-{\sen \dotfill (\thesection)\dotfill \she}
-{0em}
-{\MakeUppercase}
 \usepackage{graphicx}
 \graphicspath{ {./} }
+
+\usepackage[colorlinks]{hyperref}
+\definecolor{mgreen}{RGB}{25, 160, 50}
+\definecolor{mblue}{RGB}{30, 60, 200}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	citecolor=mgreen,
+	linkcolor=black,
+	urlcolor=mblue,
+	pdftitle={AI Something},
+	pdfpagemode=FullScreen,
+}
 
 
 % Hebrew initialzing
@@ -95,18 +104,22 @@
 \babelprovide[import]{english}
 \babelfont[hebrew]{rm}{David CLM}
 \babelfont[hebrew]{sf}{David CLM}
-\babelfont[english]{tt}{Monaspace Xenon}
+%\babelfont[english]{tt}{Monaspace Xenon}
 \usepackage[shortlabels]{enumitem}
 \newlist{hebenum}{enumerate}{1}
 
 % Language Shortcuts
 \newcommand\en[1] {\begin{otherlanguage}{english}#1\end{otherlanguage}}
+\newcommand\he[1] {\she#1\sen}
 \newcommand\sen   {\begin{otherlanguage}{english}}
 	\newcommand\she   {\end{otherlanguage}}
 \newcommand\del   {$ \!\! $}
 
-\newcommand\npage {\vfil {\hfil \textbf{\textit{המשך בעמוד הבא}}} \hfil \vfil \pagebreak}
-\newcommand\ndoc  {\dotfill \\ \vfil {\begin{center} {\textbf{\textit{שחר פרץ, 2024}} \\ \scriptsize \textit{נוצר באמצעות תוכנה חופשית בלבד}} \end{center}} \vfil	}
+\newcommand\npage {\she\vfil {\hfil \textbf{\textit{המשך בעמוד הבא}}} \hfil \vfil \pagebreak\sen}
+\newcommand\ndoc  {\dotfill \\ \vfil {\begin{center}
+			{\textbf{\textit{שחר פרץ, 2025}} \\
+				\scriptsize \textit{קומפל ב־}\en{\LaTeX}\,\textit{ ונוצר באמצעות תוכנה חופשית בלבד}}
+	\end{center}} \vfil	}
 
 \newcommand{\rn}[1]{
 	\textup{\uppercase\expandafter{\romannumeral#1}}
@@ -126,6 +139,7 @@
 \newcommand\R     {\mathbb{R}}
 \newcommand\Q     {\mathbb{Q}}
 \newcommand\C     {\mathbb{C}}
+\newcommand\One   {\mathit{1}}
 
 \newcommand\ml    {\ell}
 \newcommand\mj    {\jmath}
@@ -178,14 +192,13 @@
 \newcommand\open  {\big(}
 \newcommand\qopen {\quad\big(}
 \newcommand\close {\big)}
-\newcommand\also  {\text{\en{, }}}
-\newcommand\defi  {\text{\en{ definition}}}
-\newcommand\defis {\text{\en{ definitions}}}
-\newcommand\given {\text{\en{given }}}
-\newcommand\case  {\text{\en{if }}}
-\newcommand\syx   {\text{\en{ syntax}}}
-\newcommand\rle   {\text{\en{ rule}}}
-\newcommand\other {\text{\en{else}}}
+\newcommand\also  {\text{, }}
+\newcommand\defis {\text{ definitions}}
+\newcommand\given {\text{given }}
+\newcommand\case  {\text{if }}
+\newcommand\syx   {\text{ syntax}}
+\newcommand\rle   {\text{ rule}}
+\newcommand\other {\text{else}}
 \newcommand\set   {\ell et \text{ }}
 \newcommand\ans   {\mathscr{A}\!\mathit{nswer}}
 
@@ -211,6 +224,8 @@
 \newcommand\lc    {\left\lceil}
 \newcommand\rf    {\right\rfloor}
 \newcommand\lf    {\left\lfloor}
+\newcommand\ceil  [1] {\lc #1 \rc}
+\newcommand\floor [1] {\lf #1 \rf}
 
 \newcommand\lex   {<_{lex}}
 
@@ -231,7 +246,6 @@
 \newcommand\logx  {\log x}
 \newcommand\lnx   {\ln x}
 \newcommand\cosx  {\cos x}
-\newcommand\cost  {\cos \theta}
 \newcommand\sinx  {\sin x}
 \newcommand\sint  {\sin \theta}
 \newcommand\tanx  {\tan x}
@@ -270,6 +284,13 @@
 \DeclareMathOperator{\arccsch}{arccsch}
 \DeclareMathOperator{\arccoth}{arccoth}
 \DeclareMathOperator{\atant}  {atan2} 
+\DeclareMathOperator{\Sp}     {span} 
+\DeclareMathOperator{\sgn}    {sgn} 
+\DeclareMathOperator{\row}    {Row} 
+\DeclareMathOperator{\adj}    {adj} 
+\DeclareMathOperator{\rk}     {rank} 
+\DeclareMathOperator{\col}    {Col} 
+\DeclareMathOperator{\tr}     {tr}
 
 \newcommand\dx    {\,\mathrm{d}x}
 \newcommand\dt    {\,\mathrm{d}t}
@@ -319,7 +340,9 @@
 \newcommand\ant       {a_{n - 2}}
 
 % Linear Algebra
-\DeclareMathOperator{\chr}    {char}
+\DeclareMathOperator{\chr}     {char}
+\DeclareMathOperator{\diag}    {diag}
+\DeclareMathOperator{\Hom}     {Hom}
 
 \newcommand\lra       {\leftrightarrow}
 \newcommand\chrf      {\chr(\F)}
@@ -335,18 +358,11 @@
 \newcommand\rrr[1]    {\xxrightarrow{1}{#1}}
 \newcommand\rrt[2]    {\xxrightarrow{1}[#2]{#1}}
 \newcommand\mat[2]    {M_{#1\times#2}}
+\newcommand\gmat      {\mat{m}{n}(\F)}
 \newcommand\tomat     {\, \dequad \longrightarrow}
 \newcommand\pms[1]    {\begin{pmatrix}
 		#1
 \end{pmatrix}}
-
-\DeclareMathOperator{\Sp}     {span} 
-\DeclareMathOperator{\sgn}    {sgn} 
-\DeclareMathOperator{\row}    {Row} 
-\DeclareMathOperator{\adj}    {adj} 
-\DeclareMathOperator{\rk}     {rank} 
-\DeclareMathOperator{\col}    {Col} 
-\DeclareMathOperator{\tr}     {tr}
 
 % someone's code from the internet: https://tex.stackexchange.com/questions/27545/custom-length-arrows-text-over-and-under
 \makeatletter
@@ -412,17 +428,101 @@
 \newcommand\bs        {\blacksquare}
 \newcommand\dequad    {\!\!\!\!\!\!}
 \newcommand\dequadd   {\dequad\duquad}
-\newcommand\wmid      {\;\middle\vert\;}
 
 \renewcommand\phi     {\varphi}
-\newcommand\bcl[1]    {\big(#1\big)}
+
+\newtheorem{Theorem}{משפט}
+\theoremstyle{definition}
+\newtheorem{definition}{הגדרה}
+\newtheorem{Lemma}{למה}
+\newtheorem{Remark}{הערה}
+\newtheorem{Notion}{סימון}
+
+\newcommand\theo  [1] {\begin{Theorem}#1\end{Theorem}}
+\newcommand\defi  [1] {\begin{definition}#1\end{definition}}
+\newcommand\rmark [1] {\begin{Remark}#1\end{Remark}}
+\newcommand\lem   [1] {\begin{Lemma}#1\end{Lemma}}
+\newcommand\noti  [1] {\begin{Notion}#1\end{Notion}}
+
+% DS
+\newcommand\limsi     {\limsup_{n \to \inf}}
+\newcommand\limfi     {\liminf_{n \to \inf}}
+
+\DeclareMathOperator\amort   {amort}
+\DeclareMathOperator\worst   {worst}
+\DeclareMathOperator\type    {type}
+\DeclareMathOperator\cost    {cost}
+
+\newcommand\dsList{
+	\sFunc{List}
+	\sFunc{Retrieve}
+	\SetKwFunction{RetrieveFirst}{Retrieve-First}
+	\SetKwFunction{RetrieveLast}{Retrieve-Last}
+	\sFunc{Delete}
+	\SetKwFunction{DeleteFirst}{Delete-First}
+	\SetKwFunction{DeleteLast}{Delete-Last}
+	\sFunc{Insert}
+	\SetKwFunction{InsertFirst}{Insert-First}
+	\SetKwFunction{InsertLast}{Insert-Last}
+	\sFunc{Shift}
+	\sFunc{Length}
+	\sFunc{Concat}
+	\sFunc{Plant}
+	\sFunc{Split}
+}
+\newcommand\dsQueue{
+	\sFunc{Queue}
+	\sFunc{Enqueue}
+	\sFunc{Head}
+	\sFunc{Dequeue}
+}
+\newcommand\dsStack{
+	\sFunc{Stack}
+	\sFunc{Push}
+	\sFunc{Top}
+	\sFunc{Pop}
+}
+\newcommand\dsVector{
+	\sFunc{Vector}
+	\sFunc{Get}
+	\sFunc{Set}
+}
+\newcommand\dsGraph{
+	\sFunc{Graph}
+	\sFunc{Edge}
+	\SetKwFunction{AddEdge}{Add-Edge}
+	\SetKwFunction{RemoveEdge}{Remove-Edge}
+	\sFunc{InDeg} \sFunc{OutDeg}
+}
+\newcommand\importDs{
+	\dsList
+	\dsQueue
+	\dsStack
+	\dsVector
+	\dsGraph
+	\SetKwData{error}{\color{codered}error}
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	\SetKwRepeat{Do}{do}{while}
+	\SetKwData{Null}{\color{codeblue}null}
+}
+
+
+% Algorithems
+\newcommand\sFunc [1] {\SetKwFunction{#1}{#1}}
+\newcommand\sData [1] {\SetKwData{#1}{#1}}
+\newcommand\sIO   [1] {\SetKwInOut{#1}{#1}}
+\newcommand\ttt   [1] {\sen \texttt{#1} \she\,}
+\newcommand\io    [2] {\Input{#1}\Output{#2}\BlankLine}
 
 %! ~~~ Document ~~~
 
-\author{Shahar Perets}
-\title{\textit{היסטוריה}}
-\date{ה־17 במרץ 2025}
+\author{שחר פרץ}
+\title{\textit{היסטוריה 26}}
 \begin{document}
 	\maketitle
+	שיעור הבא ביום שני – לא יתקיים כי שרית לא תגיע. השבוע יום הזיכרון. שבוע שעבר יום השואה. שרית נוהגת בשבוע של יום הזיכרון לעשות שיעור על יו םהזכרון. 
 	
+	
+	\ndoc
 \end{document}
