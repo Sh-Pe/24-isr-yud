@@ -89,27 +89,10 @@
 \graphicspath{ {./} }
 
 
-% Language Shortcuts
-\newcommand\en[1] {\begin{otherlanguage}{english}#1\end{otherlanguage}}
-\newcommand\sen   {\begin{otherlanguage}{english}}
-	\newcommand\she   {\end{otherlanguage}}
-\newcommand\del   {$ \!\! $}
-
-\newcommand\npage {\vfil {\hfil \textbf{\textit{המשך בעמוד הבא}}} \hfil \vfil \pagebreak}
 \newcommand\ndoc  {\dotfill \\ \vfil {\begin{center}
-			{\textbf{\textit{שחר פרץ, 2025}} \\
-				\scriptsize \textit{קומפל ב־}\en{\LaTeX}\,\textit{ ונוצר באמצעות תוכנה חופשית בלבד}}
-	\end{center}} \vfil	}
-
-\newcommand{\rn}[1]{
-	\textup{\uppercase\expandafter{\romannumeral#1}}
-}
-
-\makeatletter
-\newcommand{\skipitems}[1]{
-	\addtocounter{\@enumctr}{#1}
-}
-\makeatother
+            {\textbf{Shahar Perets, \textit{2025}} \\
+                \scriptsize {Compiled With \LaTeX \, and Made Using Free Software}}
+    \end{center}} \vfil	}
 
 %! ~~~ Math shortcuts ~~~
 
@@ -139,86 +122,13 @@
 \newcommand\sca   {\mathcal{S}} % \sc is already definded
 \newcommand\rca   {\mathcal{R}} % \rc is already definded
 
-\newcommand\prm   {\mathrm{p}}
-\newcommand\arm   {\mathrm{a}} % x86
-\newcommand\brm   {\mathrm{b}}
-\newcommand\crm   {\mathrm{c}}
-\newcommand\drm   {\mathrm{d}}
-\newcommand\erm   {\mathrm{e}}
-\newcommand\frm   {\mathrm{f}}
-\newcommand\nrm   {\mathrm{n}}
-\newcommand\vrm   {\mathrm{v}}
-\newcommand\srm   {\mathrm{s}}
-\newcommand\rrm   {\mathrm{r}}
-
 \newcommand\Si    {\Sigma}
-
-% Logic & sets shorcuts
-\newcommand\siff  {\longleftrightarrow}
-\newcommand\ssiff {\leftrightarrow}
-\newcommand\so    {\longrightarrow}
-\newcommand\sso   {\rightarrow}
-
-\newcommand\epsi  {\epsilon}
-\newcommand\vepsi {\varepsilon}
-\newcommand\vphi  {\varphi}
-\newcommand\Neven {\N_{\mathrm{even}}}
-\newcommand\Nodd  {\N_{\mathrm{odd }}}
-\newcommand\Zeven {\Z_{\mathrm{even}}}
-\newcommand\Zodd  {\Z_{\mathrm{odd }}}
-\newcommand\Np    {\N_+}
-
-% Text Shortcuts
-\newcommand\open  {\big(}
-\newcommand\qopen {\quad\big(}
-\newcommand\close {\big)}
-\newcommand\also  {\text{, }}
-\newcommand\defis {\text{ definitions}}
-\newcommand\given {\text{given }}
-\newcommand\case  {\text{if }}
-\newcommand\syx   {\text{ syntax}}
-\newcommand\rle   {\text{ rule}}
-\newcommand\other {\text{else}}
-\newcommand\set   {\ell et \text{ }}
-\newcommand\ans   {\mathscr{A}\!\mathit{nswer}}
 
 % Set theory shortcuts
 \newcommand\ra    {\rangle}
 \newcommand\la    {\langle}
 
 \newcommand\oto   {\leftarrow}
-
-\newcommand\QED   {\quad\quad\mathscr{Q.E.D.}\;\;\blacksquare}
-\newcommand\QEF   {\quad\quad\mathscr{Q.E.F.}}
-\newcommand\eQED  {\mathscr{Q.E.D.}\;\;\blacksquare}
-\newcommand\eQEF  {\mathscr{Q.E.F.}}
-\newcommand\jQED  {\mathscr{Q.E.D.}}
-
-\DeclareMathOperator\dom   {dom}
-\DeclareMathOperator\Img   {Im}
-\DeclareMathOperator\range {range}
-
-\newcommand\trio  {\triangle}
-
-\newcommand\rc    {\right\rceil}
-\newcommand\lc    {\left\lceil}
-\newcommand\rf    {\right\rfloor}
-\newcommand\lf    {\left\lfloor}
-
-\newcommand\lex   {<_{lex}}
-
-\newcommand\az    {\aleph_0}
-\newcommand\uaz   {^{\aleph_0}}
-\newcommand\al    {\aleph}
-\newcommand\ual   {^\aleph}
-\newcommand\taz   {2^{\aleph_0}}
-\newcommand\utaz  { ^{\left (2^{\aleph_0} \right )}}
-\newcommand\tal   {2^{\aleph}}
-\newcommand\utal  { ^{\left (2^{\aleph} \right )}}
-\newcommand\ttaz  {2^{\left (2^{\aleph_0}\right )}}
-
-\newcommand\n     {$n$־יה\ }
-
 % Math A&B shortcuts
 \newcommand\logn  {\log n}
 \newcommand\logx  {\log x}
@@ -244,13 +154,6 @@
 \newcommand\sll   {\overset{!}{<}}
 \newcommand\sgg   {\overset{!}{>}}
 
-\newcommand\h     {\hat}
-\newcommand\ve    {\vec}
-\newcommand\lv    {\overrightarrow}
-\newcommand\ol    {\overline}
-
-\newcommand\mlcm  {\mathrm{lcm}}
-
 \DeclareMathOperator{\sech}   {sech}
 \DeclareMathOperator{\csch}   {csch}
 \DeclareMathOperator{\arcsec} {arcsec}
@@ -263,13 +166,6 @@
 \DeclareMathOperator{\arccsch}{arccsch}
 \DeclareMathOperator{\arccoth}{arccoth}
 \DeclareMathOperator{\atant}  {atan2} 
-\DeclareMathOperator{\Sp}     {span} 
-\DeclareMathOperator{\sgn}    {sgn} 
-\DeclareMathOperator{\row}    {Row} 
-\DeclareMathOperator{\adj}    {adj} 
-\DeclareMathOperator{\rk}     {rank} 
-\DeclareMathOperator{\col}    {Col} 
-\DeclareMathOperator{\tr}     {tr}
 
 \newcommand\dx    {\,\mathrm{d}x}
 \newcommand\dt    {\,\mathrm{d}t}
@@ -281,85 +177,8 @@
 \newcommand\dfdx  {\diff{f}{x}}
 \newcommand\dit   {\limhz \frac{f(x + h) - f(x)}{h}}
 
-\newcommand\nt[1] {\frac{#1}{#1}}
-
-\newcommand\limz  {\lim_{x \to 0}}
-\newcommand\limxz {\lim_{x \to x_0}}
-\newcommand\limi  {\lim_{x \to \infty}}
-\newcommand\limh  {\lim_{x \to 0}}
-\newcommand\limni {\lim_{x \to - \infty}}
-\newcommand\limpmi{\lim_{x \to \pm \infty}}
-
-\newcommand\ta    {\theta}
-\newcommand\ap    {\alpha}
-
 \renewcommand\inf {\infty}
 \newcommand  \ninf{-\inf}
-
-% Combinatorics shortcuts
-\newcommand\sumnk     {\sum_{k = 0}^{n}}
-\newcommand\sumni     {\sum_{i = 0}^{n}}
-\newcommand\sumnko    {\sum_{k = 1}^{n}}
-\newcommand\sumnio    {\sum_{i = 1}^{n}}
-\newcommand\sumai     {\sum_{i = 1}^{n} A_i}
-\newcommand\nsum[2]   {\reflectbox{\displaystyle\sum_{\reflectbox{\scriptsize$#1$}}^{\reflectbox{\scriptsize$#2$}}}}
-
-\newcommand\bink      {\binom{n}{k}}
-\newcommand\setn      {\{a_i\}^{2n}_{i = 1}}
-\newcommand\setc[1]   {\{a_i\}^{#1}_{i = 1}}
-
-\newcommand\cupain    {\bigcup_{i = 1}^{n} A_i}
-\newcommand\cupai[1]  {\bigcup_{i = 1}^{#1} A_i}
-\newcommand\cupiiai   {\bigcup_{i \in I} A_i}
-\newcommand\capain    {\bigcap_{i = 1}^{n} A_i}
-\newcommand\capai[1]  {\bigcap_{i = 1}^{#1} A_i}
-\newcommand\capiiai   {\bigcap_{i \in I} A_i}
-
-\newcommand\xot       {x_{1, 2}}
-\newcommand\ano       {a_{n - 1}}
-\newcommand\ant       {a_{n - 2}}
-
-% Linear Algebra
-\DeclareMathOperator{\chr}     {char}
-\DeclareMathOperator{\diag}    {diag}
-\DeclareMathOperator{\Hom}     {Hom}
-
-\newcommand\lra       {\leftrightarrow}
-\newcommand\chrf      {\chr(\F)}
-\newcommand\F         {\mathbb{F}}
-\newcommand\co        {\colon}
-\newcommand\tmat[2]   {\cl{\begin{matrix}
-			#1
-		\end{matrix}\, \middle\vert\, \begin{matrix}
-			#2
-\end{matrix}}}
-
-\makeatletter
-\newcommand\rrr[1]    {\xxrightarrow{1}{#1}}
-\newcommand\rrt[2]    {\xxrightarrow{1}[#2]{#1}}
-\newcommand\mat[2]    {M_{#1\times#2}}
-\newcommand\gmat      {\mat{m}{n}(\F)}
-\newcommand\tomat     {\, \dequad \longrightarrow}
-\newcommand\pms[1]    {\begin{pmatrix}
-		#1
-\end{pmatrix}}
-
-% someone's code from the internet: https://tex.stackexchange.com/questions/27545/custom-length-arrows-text-over-and-under
-\makeatletter
-\newlength\min@xx
-\newcommand*\xxrightarrow[1]{\begingroup
-	\settowidth\min@xx{$\m@th\scriptstyle#1$}
-	\@xxrightarrow}
-\newcommand*\@xxrightarrow[2][]{
-	\sbox8{$\m@th\scriptstyle#1$}  % subscript
-	\ifdim\wd8>\min@xx \min@xx=\wd8 \fi
-	\sbox8{$\m@th\scriptstyle#2$} % superscript
-	\ifdim\wd8>\min@xx \min@xx=\wd8 \fi
-	\xrightarrow[{\mathmakebox[\min@xx]{\scriptstyle#1}}]
-	{\mathmakebox[\min@xx]{\scriptstyle#2}}
-	\endgroup}
-\makeatother
-
 
 % Greek Letters
 \newcommand\ag        {\alpha}
@@ -396,74 +215,65 @@
 \newcommand\Yg        {\Usilon}
 \newcommand\Wg        {\Omega}
 
-% Other shortcuts
+\newcommand\set   {\ell et \text{ }}
 \newcommand\tl    {\tilde}
 \newcommand\op    {^{-1}}
 
+\newcommand\co        {\colon}
 \newcommand\sof[1]    {\left | #1 \right |}
 \newcommand\cl [1]    {\left ( #1 \right )}
 \newcommand\csb[1]    {\left [ #1 \right ]}
 \newcommand\ccb[1]    {\left \{ #1 \right \}}
+\newcommand\norm[1]   {\left \vert \left \vert #1 \right \vert \right \vert}
 
-\newcommand\bs        {\blacksquare}
-\newcommand\dequad    {\!\!\!\!\!\!}
-\newcommand\dequadd   {\dequad\duquad}
-
-\renewcommand\phi     {\varphi}
-
-\newtheorem{Theorem}{משפט}
-\theoremstyle{definition}
-\newtheorem{definition}{הגדרה}
-\newtheorem{Lemma}{למה}
-\newtheorem{Remark}{הערה}
-\newtheorem{Notion}{סימון}
-
-\newcommand\theo  [1] {\begin{Theorem}#1\end{Theorem}}
-\newcommand\defi  [1] {\begin{definition}#1\end{definition}}
-\newcommand\rmark [1] {\begin{Remark}#1\end{Remark}}
-\newcommand\lem   [1] {\begin{Lemma}#1\end{Lemma}}
-\newcommand\noti  [1] {\begin{Notion}#1\end{Notion}}
 
 %! ~~~ Document ~~~
 
 \author{Shahar Perets}
 \title{Physics Shit Cheat Sheet}
 \begin{document}
-	\maketitle
 	\begin{multicols}{3}
 		\section{Mechanics}
 		\[ v = \frac{\dx}{\dt} \]
 		\[ a = \frac{\dv}{\dt} \]
+        Where $\bar v$ is the average velocity:
 		\[ \bar v = \frac{\Dg x}{\Dg t} \]
-		$\set V$ to be a vector space. Then: 
+        In a constant acceleration:
 		\begin{align*}
-			a \in V \implies\, & v = v_0 + at \\
-			a \in V \implies\, & x = x_0 + v_0t + \frac{1}{2}at^2 \\
-			a \in V \implies\, & x = x_0 + \frac{v_0 + v}{2}t \\
-			a \in V \implies\, & v = \sqrt{v_0^2 + 2a(x - x_0)} 
+			v &= v_0 + at \\
+			x &= x_0 + v_0t + \frac{1}{2}at^2 \\
+			x &= x_0 + \frac{v_0 + v}{2}t \\
+			\norm{v} &= \sqrt{v_0^2 + 2a(x - x_0)} 
 		\end{align*}
 		
 		\section{Forces}
-		\[ F = mg \]
-		\[ \sum \vec F = m \vec a \]
-		\[ F = k \, \Dg \ell \]
+        \begin{enumerate}
+            \item A body remains at rest, or in motion at a constant speed in a straight line, unless it is acted upon by a force. 
+            \item \hfil $ \sum \vec F = m \vec a $
+            \item If two bodies exert forces $\vec F_1, \vec F_2$ on each other, then $\vec F_1 = -\vec F_2$.
+        \end{enumerate}
+		\[ F_g = mg \]
+		\[ F_{sp} = k \, \Dg \ell \]
 		\[ f_s \le \mu_s N \]
 		\[ f_k = \mu_k N \]
 		
+        \columnbreak
+        
 		\section{Energy}
 		\[ W = \int \vec F(s) \ds \]
 		\begin{gather*}
 			(\exists c\, \forall x \co |F(x)| = c) \\
 			\implies W = F_x \cdot \Dg x = F\cost \Dg s
 		\end{gather*}
-		\[ E_k = \frac{1}{2}mv^2 \]
+		\[ E_k = \frac{1}{2}m\norm{v}^2 \]
 		\[ U_g = mgh \]
 		\[ U_{sp} = \frac{1}{2}k(\Dg \ell)^2 \]
 		\[ {E_k}_1 + {U_g}_1 = {E_k}_2 + {U_g}_2 \]
+        \[ \textstyle \forall i, j \co \, \cl{\sum E}_i = \cl{\sum E}_j \]
 		\[ W_F = \Dg E = E_{\mathrm{final}} - E_{\mathrm{begining}} \]
 		
 		\section{Rotational Movement}
-		\[ f = \frac{1}{T} \]
+		\[ f = \frac{1}{T} \quad \csb{\mathrm{Hz}} \]
 		\[ L = r \psi_{\mathrm{rad}} \]
 		\[ \wg = 2\pi \. f = \frac{2\pi}{T} \]
 		\[ v = \frac{2\pi r}{T} \]
@@ -477,28 +287,31 @@
 		\[ \vec a = \vec a_T + \vec a_r \]
 		\[ |a| = \sqrt{a_T^2 + a_R^2} \]
 		\[ \tant = \frac{|a_T|}{|a_R|} \]
-		
+        
 		\section{Gravity}
 		For a given gravitational system: 
-		\[ \exists c \, \forall i \co \frac{T_i^2}{r_i^3} = c \]
+		\[ \exists c \, \forall i \co \frac{T_i^2}{r_i^3} = c = \frac{4\pi^2}{GM} \]
 		\[ \cl{\frac{\bar r_1}{\bar r_2}} ^3= \cl{\frac{T_1}{T_2}}^2 \]
 		\[ F_g = G \, \frac{m_1m_2}{r^2} \]
 		\[ U_G = - \frac{G Mm}{r} \]
 		\[ E_k = \frac{GMm}{2r} = - \frac{U_G}{2} \]
+        \begin{align*}
+            \textstyle \sum E_{\text{mechanic}} \displaystyle &= E_k + U_G \\
+            &=  -\frac{GMm}{2r} = -E_k
+        \end{align*}
+        \[ (W_g)_{A \to B} = GMm\cl{\frac{1}{r_A} - \frac{1}{r_B}} \]
 		\[ \rho = \frac{m}{v} \]
 		
 		\section{Momentum}
 		\[ \vec P = m \vec v \quad \csb{N \sec} \]
-		\[ \vec J = \vec F \cdot \Dg t = \int F \dt \quad \csb{\frac{\mathrm{kg}\,m}{\sec}} \]
+		\[ \vec J = \vec F \cdot \Dg \vec t = \int F \dt \quad \csb{\frac{\mathrm{kg}\,m}{\sec}} \]
 		\[ \vec J_{\Sigma F} = \sum_{i = 1}^{n}\vec J_{F_i} = \Dg \vec P \]
 		\[ \forall t_1, t_2 \in \R \co \sum_{i = 1}^{n} m_i \vec v_i(t_1) = \sum_{i = 1}^{n}m_i \vec v_i(t_2) \]
 		In an inelastic collision: 
 		\[ Q = \Dg E_k \]
 		In an elastic collision, where $v_i$ before collision and $u_i$ after it: 
 		\[ \vec v_1 - \vec v_2 = -(\vec u_1 - \vec u_2) \]
-		
-		
 	\end{multicols}
-	\dotfill
+	\ndoc
 	
 \end{document}
